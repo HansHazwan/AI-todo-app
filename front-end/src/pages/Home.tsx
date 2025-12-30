@@ -4,7 +4,7 @@ export function HomePage() {
 
   return (
     <div className="container">
-      <Header label={"AI Todo App"} />
+      <Header title={"AI Todo App"} onRightClick={() => { console.log("Hello") }} />
       <div className="content">
         <div className="utilities">
           <button>Add</button>
