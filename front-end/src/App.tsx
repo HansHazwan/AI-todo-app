@@ -4,21 +4,32 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="header">
+        <h2>AI Todo App</h2>
+      </div>
+      <div className="content">
+        <div className="utilities">
+          <button>Add</button>
+          <input type="text" />
+        </div>
+        <div className="todoList">
+          <ul>
+            <li>
+              <p>title</p>
+              <p>description</p>
+              <p>createdAt</p>
+              <p>deadline</p>
+            </li>
+            <li>
+              <p>A title</p>
+              <p>A Description</p>
+              <p>30/12/2025</p>
+              <p>2025-12-30 23:26</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
