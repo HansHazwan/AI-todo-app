@@ -1,4 +1,5 @@
 import { Header } from "../components/Header"
+import { TaskToolbar } from "../components/TaskToolbar"
 
 export function HomePage() {
 
@@ -6,10 +7,14 @@ export function HomePage() {
     <div className="container">
       <Header title={"AI Todo App"} onRightClick={() => { console.log("Hello") }} />
       <div className="content">
-        <div className="utilities">
-          <button>Add</button>
-          <input type="text" />
-        </div>
+        <TaskToolbar
+          newActionButton={() => {
+            console.log("New Task");
+          }}
+          searchActionButton={(search: String) => {
+            console.log(search);
+          }}
+        />
         <div className="todoList">
           <ul>
             <li>
