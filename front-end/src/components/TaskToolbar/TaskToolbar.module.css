@@ -1,0 +1,30 @@
+.bar {
+  padding: 2px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newButton {
+  width: 100px;
+  height: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.searchContainer {
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
