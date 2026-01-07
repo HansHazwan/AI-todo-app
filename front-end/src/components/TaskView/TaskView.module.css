@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: solid 0.2px;
+  border-top: solid 0.2px;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.date {
+  width: 150px;
+  text-align: center;
+}
+
+.checkbox {
+  width: 50px;
+}

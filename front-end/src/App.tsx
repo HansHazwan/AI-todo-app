@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import { HomePage } from './pages/Home';
+import { Home } from './pages/Home';
 
 function App() {
   return (
-    <HomePage />
+    <Home />
   );
 }
 

@@ -1,37 +1,28 @@
 import { Header } from "../components/Header"
+import { TaskListView } from "../components/TaskListView";
 import { TaskToolbar } from "../components/TaskToolbar"
+import { useState } from "react";
+import { Task } from "../types/Task";
 
-export function HomePage() {
+export function Home() {
+  const [tasks, setTasks] = useState<Task[]>([
+    { ID: 0, title: "Doing Homework", description: "Must Done Tomorrow", isDone: false, date: new Date() },
+    { ID: 1, title: "Complete ESP32 project document", isDone: true, date: new Date() },
+    { ID: 1, title: "Doing Homework", description: "Must Done Tomorrow", isDone: false, date: new Date() },
+  ]);
 
   return (
     <div className="container">
       <Header title={"AI Todo App"} onRightClick={() => { console.log("Hello") }} />
-      <div className="content">
-        <TaskToolbar
-          newActionButton={() => {
-            console.log("New Task");
-          }}
-          searchActionButton={(search: String) => {
-            console.log(search);
-          }}
-        />
-        <div className="todoList">
-          <ul>
-            <li>
-              <p>title</p>
-              <p>description</p>
-              <p>createdAt</p>
-              <p>deadline</p>
-            </li>
-            <li>
-              <p>A title</p>
-              <p>A Description</p>
-              <p>30/12/2025</p>
-              <p>2025-12-30 23:26</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <TaskToolbar
+        newActionButton={() => {
+          console.log("New Task");
+        }}
+        searchActionButton={(search: String) => {
+          console.log(search);
+        }}
+      />
+      <TaskListView taskList={tasks} />
     </div>
 
   )

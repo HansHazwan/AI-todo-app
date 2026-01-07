@@ -1,0 +1,14 @@
+.container {
+  margin: 50px;
+  border: solid 0.2px;
+  border-radius: 4px;
+}
+
+.task-list {
+  list-style-type: number;
+}
+
+.task-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
