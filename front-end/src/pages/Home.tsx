@@ -3,6 +3,7 @@ import { TaskListView } from "../components/TaskListView";
 import { TaskToolbar } from "../components/TaskToolbar"
 import { useState } from "react";
 import { Task } from "../types/Task";
+import { TaskListHeaderView } from "../components/TaskListHeaderView";
 
 export function Home() {
   const [tasks, setTasks] = useState<Task[]>([
@@ -14,15 +15,18 @@ export function Home() {
   return (
     <div className="container">
       <Header title={"AI Todo App"} onRightClick={() => { console.log("Hello") }} />
-      <TaskToolbar
-        newActionButton={() => {
-          console.log("New Task");
-        }}
-        searchActionButton={(search: String) => {
-          console.log(search);
-        }}
-      />
-      <TaskListView taskList={tasks} />
+      <div>
+        <TaskToolbar
+          newActionButton={() => {
+            console.log("New Task");
+          }}
+          searchActionButton={(search: String) => {
+            console.log(search);
+          }}
+        />
+        <TaskListHeaderView />
+        <TaskListView taskList={tasks} />
+      </div>
     </div>
 
   )
