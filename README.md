@@ -3,12 +3,9 @@ Sometime we forgot about our task that effect our future. I have an idea develop
 
 ## Features
 - Authocation System
-- Display user task list
-- Add new task to the list
-- Remove task from the list
-- Edit task from the list
 - Saving data on database
 - AI chatbot
+- Add, delete, edit, and read task list
 
 ## Requirments
 - Front-end : React.js
